@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdti0e5eydt8g"]
+[gd_scene load_steps=4 format=3 uid="uid://bdti0e5eydt8g"]
 
 [ext_resource type="Texture2D" uid="uid://cbyax7m45year" path="res://Batmobile.png" id="1_jwj78"]
+[ext_resource type="Script" uid="uid://cscxt4x1b84pp" path="res://batmobile.gd" id="1_rrcih"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rrcih"]
 size = Vector3(4.9257813, 0.15888037, 2.4248047)
 
 [node name="Batmobile" type="CharacterBody3D"]
+script = ExtResource("1_rrcih")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
