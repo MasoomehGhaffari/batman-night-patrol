@@ -4,15 +4,29 @@
 [ext_resource type="Script" uid="uid://cscxt4x1b84pp" path="res://batmobile.gd" id="1_rrcih"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rrcih"]
-size = Vector3(4.9257813, 0.15888037, 2.4248047)
+size = Vector3(3.9689026, 0.5231559, 2.0018158)
 
 [node name="Batmobile" type="CharacterBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
 script = ExtResource("1_rrcih")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-2.1855695e-07, -5, -2.1855695e-07, 0, -2.1855695e-07, 5, -5, 2.1855695e-07, 9.553427e-15, 0, 0, 0)
 texture = ExtResource("1_jwj78")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47485352, -0.42055982, -0.7758789)
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 1, 0, -5, 0, -2.1855695e-07, -0.017250057, 0, -0.017318733)
 shape = SubResource("BoxShape3D_rrcih")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.44294, 0, -0.23195726, 0, 0.5, 0, 0.23195726, 0, -0.44294, 0, 4, -10)
+current = true
+fov = 14.062493
+
+[node name="Headlight" type="SpotLight3D" parent="."]
+transform = Transform3D(-1, -5.6194274e-08, 6.696973e-08, 0, 0.76604444, 0.6427876, -8.742278e-08, 0.6427876, -0.76604444, 0, 1.5, 5)
+light_energy = 30.0
+light_indirect_energy = 20.0
+light_size = 20.0
+light_specular = 10.0
+spot_range = 150.0
