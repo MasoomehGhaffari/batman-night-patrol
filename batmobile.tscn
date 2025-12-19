@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdti0e5eydt8g"]
+[gd_scene load_steps=5 format=3 uid="uid://bdti0e5eydt8g"]
 
 [ext_resource type="Texture2D" uid="uid://cbyax7m45year" path="res://Batmobile.png" id="1_jwj78"]
 [ext_resource type="Script" uid="uid://cscxt4x1b84pp" path="res://batmobile.gd" id="1_rrcih"]
+[ext_resource type="AudioStream" uid="uid://dekofesa4pihv" path="res://media/Fire-Alarm-Sound-3.mp3" id="3_y6gxp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rrcih"]
 size = Vector3(3.9689026, 0.5231559, 2.0018158)
@@ -11,7 +12,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
 script = ExtResource("1_rrcih")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-2.1855695e-07, -5, -2.1855695e-07, 0, -2.1855695e-07, 5, -5, 2.1855695e-07, 9.553427e-15, 0, 0, 0)
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 0, 0, 0)
 texture = ExtResource("1_jwj78")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -30,3 +31,6 @@ light_indirect_energy = 20.0
 light_size = 20.0
 light_specular = 10.0
 spot_range = 150.0
+
+[node name="SirenSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_y6gxp")
