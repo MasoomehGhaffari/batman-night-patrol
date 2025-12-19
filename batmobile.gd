@@ -2,12 +2,12 @@ extends CharacterBody3D
 
 # --- تنظیمات اسم دکمه‌های حرکت ---
 var action_forward = "move_forward"
-var action_back =    "move_backward"
-var action_left =    "turn_left"
-var action_right =   "turn_right"
+var action_back =    "move_back"
+var action_left =    "move_left"
+var action_right =   "move_right"
 var action_boost =   "boost"
 
-#--- تعریف حالت‌ها (State System) ---
+# --- تعریف حالت‌ها (State System) ---
 enum BatmanState { NORMAL, STEALTH, ALERT }
 var current_state = BatmanState.NORMAL
 
@@ -69,7 +69,7 @@ func _physics_process(delta):
 			target_speed = normal_speed
 
 	# -----------------------------------------------
-	# 3. حرکت و چرخش (مثل قبل)
+	# 3. حرکت و چرخش
 	# -----------------------------------------------
 	var turn_dir = Input.get_axis(action_right, action_left)
 	rotation.y += turn_dir * rotation_speed * delta
